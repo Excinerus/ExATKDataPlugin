@@ -7,7 +7,9 @@ It offers a simple papyrus function to copy AttackData from one ActorBase to Ano
 ExReplaceATKDataScript.ReplaceATKData(ActorBase theSourceBase, ActorBase theDestinationBase)
 
 The copy is shallow, as with the old implementation from 2013, the destination will point at the same AttackData map as the source rather than getting its own duplicate.
+
 This was made at the time to bypass an engine bug that reverted the players attack data to those from the Race record. 
+
 Thus the change from this function isn't permanent and must be called as initialisation before AttackData use on OnPlayerLoadGame() and OnRaceSwitchComplete()
 CACO does that in xCACOGrenadeMaintenanceScript.
 
