@@ -1,6 +1,15 @@
-# CommonLibSSE Plugin Template
+# ExATKDataPlugin
 
-This is a basic plugin template using CommonLibSSE.
+This is a rebuild of ExATKDataPlugin.dll for [Complete Alchemy and Cooking Overhaul SE](https://www.nexusmods.com/skyrimspecialedition/mods/19924) using [libxse commonlibsse-template](https://github.com/libxse/commonlibsse-template)
+
+It offers a simple papyrus function to copy AttackData from one ActorBase to Another:
+
+ExReplaceATKDataScript.ReplaceATKData(ActorBase theSourceBase, ActorBase theDestinationBase)
+
+The copy is shallow, as with the old implementation from 2013, the destination will point at the same AttackData map as the source rather than getting its own duplicate.
+This was made at the time to bypass an engine bug that reverted the players attack data to those from the Race record. 
+Thus the change from this function isn't permanent and must be called as initialisation before AttackData use on OnPlayerLoadGame() and OnRaceSwitchComplete()
+CACO does that in xCACOGrenadeMaintenanceScript.
 
 ### Requirements
 * [XMake](https://xmake.io) [3.0.0+]
@@ -8,8 +17,8 @@ This is a basic plugin template using CommonLibSSE.
 
 ## Getting Started
 ```bat
-git clone --recurse-submodules https://github.com/libxse/commonlibsse-template
-cd commonlibsse-template
+git clone --recurse-submodules https://github.com/Excinerus/ExATKDataPlugin
+cd ExATKDataPlugin
 ```
 
 ### Build
@@ -52,4 +61,4 @@ xmake require --upgrade
 ```
 
 ## Documentation
-Please refer to the [Wiki](../../wiki/Home) for more advanced topics.
+Please refer to [libxse commonlibsse-template](https://github.com/libxse/commonlibsse-template) and its wiki for more advanced topics.
