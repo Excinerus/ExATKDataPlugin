@@ -10,7 +10,8 @@ The copy is shallow, as with the old implementation from 2013, the destination w
 
 This was made at the time to bypass an engine bug that reverted the players attack data to those from the Race record. 
 
-Thus the change from this function isn't permanent and must be called as initialisation before AttackData use on OnPlayerLoadGame() and OnRaceSwitchComplete()
+Thus the change from this function isn't permanent and must be called as initialisation before AttackData use on OnPlayerLoadGame() and OnRaceSwitchComplete().
+
 CACO does that in xCACOGrenadeMaintenanceScript.
 
 ### For CACO Users
