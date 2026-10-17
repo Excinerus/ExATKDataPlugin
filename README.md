@@ -11,6 +11,9 @@ This was made at the time to bypass an engine bug that reverted the players atta
 Thus the change from this function isn't permanent and must be called as initialisation before AttackData use on OnPlayerLoadGame() and OnRaceSwitchComplete()
 CACO does that in xCACOGrenadeMaintenanceScript.
 
+### For CACO Users
+The release only contains ExATKDataPlugin.dll binaries and papyrus script files. 
+
 ### Requirements
 * [XMake](https://xmake.io) [3.0.0+]
 * C++23 Compiler (MSVC, Clang-CL)
